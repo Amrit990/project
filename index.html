@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyewear Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Animations Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Custom CSS -->
+    <style>
+        .hero_section {
+            background: url('/images/eyeglasses\ \(1\).jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero_text {
+            color: white;
+            text-align: right;
+
+        }
+        .hero_text h1 {
+            font-size: 4rem;
+        }
+        .hero_text p {
+            font-size: 1.5rem;
+        }
+        .btn-shop-now {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+        }
+        .btn-shop-now:hover{
+            background-color: #fc7ec8;
+            
+        }
+        .category_section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product-card {
+            margin: 20px;
+        }
+        .product-image img {
+            width: 100%;
+            height: auto;
+        }
+        .product-title {
+            font-size: 1.2rem;
+            color: black;
+            margin-top: 10px;
+        }
+        .product-price {
+            font-size: 1rem;
+            color: rgb(224, 134, 134);
+        }
+        .color-options {
+            margin-top: 5px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .color-options li {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+  
+.product-image {
+    position: relative;
+}
+.hot-selling {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+.star-rating {
+    font-size: 1.5rem;
+    color: gold;
+    margin-top: 10px;
+}
+.card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid red;
+}
+.card:hover {
+    transform: scale(1.08);
+}
+.review-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.partner-slider {
+    animation: slide 30s linear infinite;
+    display: flex;
+}
+
+.partner-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+}
+
+
+.partner-slider {
+    display: flex;
+    margin: 3.0rem;
+    border: 2px solid beige;
+    padding: 2.0rem;
+    justify-content: center;
+    align-items: center;
+    animation: slide 30s linear infinite;
+}
+
+.partner-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%); /* Start off-screen on the right */
+    }
+    10% {
+        transform: translateX(0); /* Move into view */
+    }
+    90% {
+        transform: translateX(0); /* Stay in view */
+    }
+    100% {
+        transform: translateX(-100%); /* Move out of view to the left */
+    }
+}
+
+
+.question-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .icon-section {
+      text-align: center;
+    }
+    .icon-section i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"style="font-size: x-large;">Eyewear Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" style="font-size: large;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="font-size: large;">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="font-size: large;">Deals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="font-size: large;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section animate__animated animate__fadeIn">
+    <div class="container-fluid p-5 bg-light position-relative">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 text-success">Up to 35% off Complete Pair</h1>
+                <p class="h5 mt-3">CODE: GETMORE</p>
+                <a href="#" class="btn btn-warning btn-lg mt-4">Shop Now</a>
+            </div>
+            <div class="col-md-6">
+                <img src="/images/eyeglasses (1).jpg" alt="Glasses Model" class="img-fluid w-100" style="object-fit: cover; height: 90%;">
+            </div>
+        </div>
+        <div class="sale-badge position-absolute top-0 end-0 m-3 bg-success text-white p-2 rounded">SALE</div>
+    </div>
+</section>
+
+<div class="features bg-white border-top">
+    <div class="container py-3">
+        <div class="row text-center">
+            <div class="col-md feature-item">
+                <i class="icon fs-1">🔥</i>
+                <p>14-Day Free Returns</p>
+            </div>
+            <div class="col-md feature-item">
+                <i class="icon fs-1">🎧</i>
+                <p>24/7 Customer Service</p>
+            </div>
+            <div class="col-md feature-item">
+                <i class="icon fs-1">✅</i>
+                <p>365-Day Guarantee</p>
+            </div>
+            <div class="col-md feature-item">
+                <i class="icon fs-1">⭐</i>
+                <p>216k+ Reviews</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Categories Section -->
+<section class="category_section py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <a href="" style="text-decoration: none;color: #000;">  <img src="/images/men.jpeg" alt="Men's Eyewear">
+                <h3>Men's Eyewear</h3>
+            </a>
+            </div>
+            <div class="col-md-4">
+                <a href="" style="text-decoration: none;color: #000;"> <img src="./images/women.jpeg" alt="Women's Eyewear">
+                <h3>Women's Eyewear</h3>
+            </a>
+            </div>
+            <div class="col-md-4">
+                <a href="" style="text-decoration: none;color: #000;">  <img src="/images/kid.jpeg" alt="Kids' Eyewear">
+                <h3>Kids' Eyewear</h3>
+                 </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<div class="container">
+    <h2 class="text-center mt-4">Best Selling Glasses</h2>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 product-card">
+            <div class="product-image">
+                <img src="/images/metalic.jpeg" alt="St Michel $55">
+                <span class="hot-selling">Hot Selling</span> <!-- Hot Selling indicator -->
+            </div>
+          <a href="" style="text-decoration: none;color: #000;">  <h3 class="product-title">St Michel $55</h3></a>
+            <div class="star-rating">
+                ★★★★☆ <!-- 4 stars rating -->
+            </div>
+           
+            <ul class="color-options">
+                <li style="background-color: #CCCCCC;"></li>
+                <li style="background-color: #EEEEEE;"></li>
+                <li style="background-color: #BBBBBB;"></li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 product-card">
+            <div class="product-image">
+                <img src="/images/modern.jpeg" alt="Vinyl $64">
+                <span class="hot-selling">Hot Selling</span> <!-- Hot Selling indicator -->
+            </div>
+            <a href="" style="text-decoration: none;color: #000;">  <h3 class="product-title">Vinyl $64</h3></a>
+            <div class="star-rating">
+                ★★★★☆ <!-- 4 stars rating -->
+            </div>
+            <ul class="color-options">
+                <li style="background-color: #FA8072;"></li>
+                <li style="background-color: #FFD700;"></li>
+                <li style="background-color: #90EE90;"></li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 product-card">
+            <div class="product-image">
+                <img src="/images/pactic.jpeg" alt="Romy $64">
+                <span class="hot-selling">Hot Selling</span> <!-- Hot Selling indicator -->
+            </div>
+            <a href="" style="text-decoration: none;color: #000;">  <h3 class="product-title">Romy $64</h3></a>
+            <div class="star-rating">
+                ★★★★☆ <!-- 4 stars rating -->
+            </div>
+            <ul class="color-options">
+                <li style="background-color: #6A5ACD;"></li>
+                <li style="background-color: #8B4513;"></li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 product-card">
+            <div class="product-image">
+                <img src="/images/first.jpeg" alt="Good Vibrations $64">
+                <span class="hot-selling">Hot Selling</span> <!-- Hot Selling indicator -->
+            </div>
+            <a href="" style="text-decoration: none;color: #000;">  <h3 class="product-title">Good Vibrations $64</h3></a>
+            <div class="star-rating">
+                ★★★★☆ <!-- 4 stars rating -->
+            </div>
+            <ul class="color-options">
+                <li style="background-color: #000000;"></li>
+                <li style="background-color: #cf3434;"></li>
+                <li style="background-color: #FF6347;"></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 product-card">
+            <div class="product-image">
+                <img src="/images/frame23.jpeg" alt="Good Vibrations $64">
+                <span class="hot-selling">Hot Selling</span> <!-- Hot Selling indicator -->
+            </div>
+            <a href="" style="text-decoration: none;color: #000;"> <h3 class="product-title">Good Vibrations $94</h3></a>
+            <div class="star-rating">
+                ★★★★☆ <!-- 4 stars rating -->
+            </div>
+            <ul class="color-options">
+                <li style="background-color: #000000;"></li>
+                <li style="background-color: #cf3434;"></li>
+                <li style="background-color: #FF6347;"></li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container py-5">
+    <h2 class="text-center mb-5 animate__animated animate__fadeInDown">The reviews are in!</h2>
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 animate__animated animate__fadeInLeft">
+                <img src="/images/review.jpg" alt="Customer 1" class="rounded-circle mx-auto mb-4" style="width: 100px;">
+                <h4>CARLEE A. B.</h4>
+                <p class="text-warning">Perfect Fit</p>
+                <p class="review-text">The website was easy to use, glasses shipped quickly, and I got lots of compliments! Thanks!</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 animate__animated animate__fadeInUp">
+                <img src="/images/review2 (1).jpg" alt="Customer 2" class="rounded-circle mx-auto mb-4" style="width: 100px;">
+                <h4>PAUHOV X.</h4>
+                <p class="text-warning">Awesome!</p>
+                <p class="review-text">These glasses fit perfectly! They're lightweight and feel sturdy. The colors and design are beautiful. Will be a returning customer!</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 animate__animated animate__fadeInRight">
+                <img src="/images/review2 (2).jpg" alt="Customer 3" class="rounded-circle mx-auto mb-4" style="width: 100px;">
+                <h4>SAMANTHA J.</h4>
+                <p class="text-warning">I LOVE EyeBuyDirect</p>
+                <p class="review-text">It's so user-friendly and customer service is incredible. I tell everyone about this site!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="partner-brands py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Partner Brands</h2>
+        <div class="overflow-hidden">
+            <div class="d-flex partner-slider">
+                <div class="partner-item mx-3">
+                    <img src="/images/rayban.png" alt="Ray-Ban" class="img-fluid">
+                    <p class="text-center">Ray-Ban</p>
+                </div>
+                <div class="partner-item mx-3">
+                    <img src="/images/oakley.png" alt="Oakley" class="img-fluid">
+                    <p class="text-center">Oakley</p>
+                </div>
+                <div class="partner-item mx-3">
+                    <img src="/images/parker.png" alt="Warby Parker" class="img-fluid">
+                    <p class="text-center">Warby Parker</p>
+                </div>
+                <div class="partner-item mx-3">
+                    <img src="/images/person.gif" alt="Persol" class="img-fluid">
+                    <p class="text-center">Persol</p>
+                </div>
+                <div class="partner-item mx-3">
+                    <img src="/images/gucci.gif" alt="Gucci" class="img-fluid">
+                    <p class="text-center">Gucci</p>
+                </div>
+                <div class="partner-item mx-3">
+                    <img src="/images/prada.png" alt="Prada" class="img-fluid">
+                    <p class="text-center">Prada</p>
+                </div>
+                <div class="partner-item mx-3">
+                    <img src="/images/maui_jim.png" alt="Maui Jim" class="img-fluid">
+                    <p class="text-center">Maui Jim</p>
+                </div>
+                <div class="partner-item mx-3">
+                    <img src="/images/ck.png" alt="Calvin Klein" class="img-fluid">
+                    <p class="text-center">Calvin Klein</p>
+                </div>
+                <div class="partner-item mx-3">
+                    <img src="/images/tom_ford.png" alt="Tom Ford" class="img-fluid">
+                    <p class="text-center">Tom Ford</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container mt-5">
+    <!-- Have Glasses Questions Section -->
+    <div class="question-section text-center mb-5">
+      <h2>Have Glasses Questions?</h2>
+      <p>We’ve got answers. Learn how to find styles for your face shape while buying prescription glasses, understand your prescription, and even measure your pupillary distance at home without an eye exam!</p>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-3">
+        <div class="icon-section">
+          <i class="fas fa-file-prescription"></i>
+          <p><a href="#" class="text-decoration-none">How to Read a Prescription</a></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="icon-section">
+          <i class="fas fa-ruler"></i>
+          <p><a href="#" class="text-decoration-none">Pupillary Distance</a></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="icon-section">
+          <i class="fas fa-glasses"></i>
+          <p><a href="#" class="text-decoration-none">Frames & Face Shapes</a></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="icon-section">
+          <i class="fas fa-cart-plus"></i>
+          <p><a href="#" class="text-decoration-none">How to Buy Glasses Online</a></p>
+        </div>
+      </div>
+    </div>
+  
+ 
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-light py-4 text-center">
+    <p>&copy; 2024 Eyewear Shop. All rights reserved.</p>
+    
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
