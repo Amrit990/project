@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-brand{
+    color: #7d5011;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+.img-logo{
+    height: 70px;
+    width: 80px;
+}
+.contact-form {
+border: 2px solid black;
+margin-top: 80px;
+height: 500px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    color: #4b3f72;
+}
+
+.contact-form .form-control {
+    border: 1px solid green;
+
+}
+
+.contact-form .btn-primary {
+    background-color: #55aaff;
+    border: none;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #3f8ec7;
+}
+
+.image-side img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.contact-info-section h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-section ul li a {
+    color: #666;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p {
+    color: #666;
+}
+
+.footer-section .list-inline a {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.footer-section .list-inline a:hover {
+    color: #000;
+}

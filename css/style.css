@@ -65,6 +65,7 @@
 .product-image {
 position: relative;
 }
+
 .hot-selling {
 position: absolute;
 top: 10px;
@@ -189,23 +190,11 @@ font-size: 0.875rem;
 color: #fff;
 }
 
-/* Footer Section */
-
-.footer .container-fluid {
-padding-left: 50px;
-padding-right: 50px;
-}
-
-.img-logo{
-height: 50px;
-width: 50px;
-flex-wrap: wrap;
-}
 
 .navbar-brand{
     color: #7d5011;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
+} 
 
 
